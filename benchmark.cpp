@@ -28,5 +28,6 @@ int main(int argc, char *argv[]){
     benchmark_regression<create_regression_tournament_selection<LogNorm>>(data,lookups,"LogTE",data_name,outfile);
     benchmark_regression<create_regression_tournament_selection<FastDiscreteLogNorm>>(data,lookups,"DLogTE",data_name,outfile);
     benchmark_regression<build_regression_direct_descent>(data,lookups,"2P",data_name,outfile);
-    benchmark_regression<theil_sen>(data,lookups,"TheilSen",data_name,outfile);    
+    benchmark_regression<theil_sen>(data,lookups,"TheilSen",data_name,outfile);
+    benchmark_regression<create_regression_optimal<L1Norm>>(data,lookups,"LAD",data_name,outfile);
 }
